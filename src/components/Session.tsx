@@ -21,9 +21,6 @@ export default function Session() {
   const [showDelete, setShowDelete] = useState<boolean>(false);
   const [jobToDelete, setJobToDelete] = useState<Job | null>(null);
 
-  useEffect(() => {
-    localStorage.setItem('jobs', JSON.stringify(jobLocal));
-  }, [jobLocal]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setJob(e.target.value);
